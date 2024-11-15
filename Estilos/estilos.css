@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../imagenes/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000;
+    text-align: center;
+}
+
+.titulo-index {
+    font-size: 3rem;
+    color: #007BFF;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.vertical-menu {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #87CEFA;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.menu-item {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(1, 21, 157, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #020087;
+    color: #fff;
+}
+
+.menu-mapa {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(29, 148, 184, 0.8);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.menu-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-link:hover {
+    background-color: #020087;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.menu-link.active {
+    background-color: #020087;
+    color: #fff;
+    border-radius: 5px;
+}
+
+body {
+    margin-top: 60px;
+}
+
+.titulo-mapa {
+    font-size: 2.5rem;
+    color: #007BFF;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.province-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.province-button {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.guanacaste {
+    background-color: #229726;
+}
+
+.alajuela {
+    background-color: #bf0c0c;
+}
+
+.san-jose {
+    background-color: #4e005a;
+}
+
+.heredia {
+    background-color: #c58007;
+}
+
+.cartago {
+    background-color: #1d0598;
+}
+
+.limon {
+    background-color: #818705;
+}
+
+.puntarenas {
+    background-color: #00BCD4;
+}
+
+.province-button:hover {
+    transform: scale(1.1);
+    background-color: #020087;
+}
+
+#info-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #FF5733;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#info {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
