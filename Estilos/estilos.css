@@ -1,370 +1,154 @@
-body {
+/* Reinicio general de estilos */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: url('../imagenes/fondo.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #000;
-    text-align: center;
+    box-sizing: border-box;
 }
 
-.titulo-index {
-    font-size: 3rem;
-    color: #007BFF;
-    text-align: center;
-    margin-top: 50px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.vertical-menu {
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #87CEFA;
-    border-radius: 10px;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.menu-item {
-    display: block;
-    margin: 10px 0;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(1, 21, 157, 0.1);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.menu-item:hover {
-    background-color: #020087;
-    color: #fff;
-}
-
-.menu-mapa {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(29, 148, 184, 0.8);
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.menu-link {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.menu-link:hover {
-    background-color: #020087;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.menu-link.active {
-    background-color: #020087;
-    color: #fff;
-    border-radius: 5px;
-}
-
+/* Configuración general del cuerpo */
 body {
-    margin-top: 60px;
-}
-
-.titulo-mapa {
-    font-size: 2.5rem;
-    color: #007BFF;
-    text-align: center;
-    margin-top: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.province-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: rgba(89, 154, 252, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.province-button {
-    width: 150px;
-    height: 50px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.guanacaste {
-    background-color: #229726;
-}
-
-.alajuela {
-    background-color: #bf0c0c;
-}
-
-.san-jose {
-    background-color: #4e005a;
-}
-
-.heredia {
-    background-color: #c58007;
-}
-
-.cartago {
-    background-color: #1d0598;
-}
-
-.limon {
-    background-color: #818705;
-}
-
-.puntarenas {
-    background-color: #00BCD4;
-}
-
-.province-button:hover {
-    transform: scale(1.1);
-    background-color: #020087;
-}
-
-#info-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 15px;
-    background-color: rgba(89, 154, 252, 0.9);
-    border: 2px solid #000000;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-#info {
-    font-size: 18px;
+    font-family: Arial, sans-serif;
+    background-color: #2DC4C4; /* Fondo turquesa */
     color: #333;
-    font-weight: bold;
-}
-.nosotros-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    line-height: 1.6;
 }
 
-.nosotros-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 30px 0;
-}
-
-.nosotros-section:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.nosotros-box {
-    flex: 1;
-    padding: 20px;
-    background-color: rgba(89, 154, 252, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-}
-
-
-.nosotros-title {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.nosotros-box p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #000000;
-}
-
-.nosotros-image {
-    flex: 1;
-    text-align: center;
-}
-
-.nosotros-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
+/* Estilos para la barra de navegación */
 .menu {
     display: flex;
     justify-content: center;
-    background-color: rgba(29, 148, 184, 0.8);
+    background-color: #007BFF;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
     z-index: 1000;
 }
 
 .menu-link {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.menu-link:hover {
-    background-color: #020087;
-    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
 }
 
+.menu-link:hover,
 .menu-link.active {
-    background-color: #020087;
-    color: #fff;
-    border-radius: 5px;
+    background-color: #0056b3;
+    color: #ffffff;
 }
 
-body {
-    margin-top: 60px;
-}
-
-.titulo-contacto {
-    font-size: 2.5rem;
-    color: #007BFF;
-    text-align: center;
-    margin-top: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
+/* Contenedor del formulario */
 .form-container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: rgba(29, 148, 184, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Título principal */
+.titulo-contacto {
+    font-size: 2rem;
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
 
-form label {
+/* Etiquetas del formulario */
+.donar-form label {
     display: block;
-    font-size: 1rem;
+    margin-bottom: 8px;
     font-weight: bold;
-    margin-bottom: 10px;
     color: #333;
+    font-size: 1rem;
 }
 
-
-form input,
-form select,
-form textarea {
+/* Campos de entrada y select */
+.donar-form input,
+.donar-form select {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-    box-sizing: border-box;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Botón de enviar */
 .btn-submit {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
     font-size: 1rem;
     font-weight: bold;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .btn-submit:hover {
-    background-color: #020087;
+    background-color: #218838;
 }
-
-.ayuda, .donaciones {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.noticias-container {
+    max-width: 800px;
+    margin: 50px auto;
     padding: 20px;
-    margin: 100px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.ayuda h2, .donaciones h2 {
-    color: #4CAF50;
+.noticia-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.ayuda ul, .donaciones ul {
-    list-style: none;
-    padding: 0;
-}
-
-.ayuda ul li, .donaciones ul li {
+.noticia-box h2 {
     margin-bottom: 10px;
+    color: #007BFF;
 }
 
-.ayuda a, .donaciones a {
-    color: #4CAF50;
+.noticia-box p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.noticia-fecha {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+
+.vertical-menu a.menu-item {
+    display: block;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
     text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.ayuda a:hover, .donaciones a:hover {
-    text-decoration: underline;
+.vertical-menu a.menu-item:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
 }
-
-.btn-donacion {
-    background: #4CAF50;
-    color: #fff !important;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.btn-donacion:hover {
-    background: #0a9611;
-}
-
-.btn-donacion:focus, .btn-donacion:active {
-    background: #4CAF50;
-    color: #fff !important;
-}
-
-
-
-
-

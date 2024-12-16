@@ -29,7 +29,7 @@
 
         <h3>Cómo Donar</h3>
         <p>Para hacer tu donación, simplemente haz clic en el botón de abajo y serás redirigido a nuestra página de pagos segura.</p>
-        <a href="" class="btn-donacion">Donar Ahora</a>
+        <a href="../Clases/donar.php" class="btn-donacion">Donar Ahora</a>
 
         <h3>Agradecimientos</h3>
         <p>Queremos agradecer a todos los que nos apoyan, sin ustedes no sería posible continuar con nuestro trabajo.</p>

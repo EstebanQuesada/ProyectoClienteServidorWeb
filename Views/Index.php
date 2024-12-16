@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Verificar si la sesión está activa
+if (!isset($_SESSION['username'])) {
+    // Redirigir al login si no hay sesión
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,8 +26,13 @@
             <a href="Mapa.php" class="menu-item">Mapa</a>
             <a href="Contacto.php" class="menu-item">Contáctanos</a>
             <a href="Nosotros.php" class="menu-item">Nosotros</a>
-            <a href="login.php" class="menu-item">Login</a>
+            <a href="Noticias.php" class="menu-link">Noticias</a>
+            <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] === 'admin'): ?>
+                <a href="../Clases/AgregarNoticia.php" class="menu-link">Agregar Noticia</a>
+            <?php endif; ?> 
+            <a href="../Clases/logout.php" class="menu-item">Cerrar Sesión</a>       
         </div>
     </div>
 </body>
 </html>
+

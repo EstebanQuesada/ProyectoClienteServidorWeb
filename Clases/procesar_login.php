@@ -3,28 +3,30 @@ include("Config.php");
 
 session_start();
 
-if(!empty($_POST)){
+if (!empty($_POST)) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-    $sql = "SELECT * FROM `user` where username = '".$_POST["username"]."'";
-    $result = $conn->query($sql);
-    
-    if($result->num_rows > 0){
-        while($row = $result->fetch_assoc()){
-            if(password_verify($_POST['password'],$row["password"])){
+    $sql = "SELECT * FROM `user` WHERE username = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            if ($password == $row["password"]) { 
                 $_SESSION["username"] = $row["username"];
                 $_SESSION["rol"] = $row["rol"];
-                header("Location: Index.php");
+                header("Location: ../Views/Index.php"); 
+                exit();
             } else {
-                echo "Usuario o password no existe";
+                echo "<script>alert('Contraseña incorrecta'); window.history.back();</script>";
             }
         }
-    } 
-    
-
-    //$_SESSION["username"] = $_POST["username"];
-
-
-    //header('Location: index.php');
+    } else {
+        echo "<script>alert('Usuario no encontrado'); window.history.back();</script>";
+    }
+    $stmt->close();
 }
-
-
+?>
