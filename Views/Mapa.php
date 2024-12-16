@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa de Zonas Afectadas</title>
     <link rel="stylesheet" href="../Estilos/estilos.css">
-    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         #map {
@@ -29,13 +28,11 @@
 
     <div id="map"></div>
 
-    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         // Inicializar el mapa
         var map = L.map('map').setView([9.7489, -83.7534], 8); // Coordenadas centrales de Costa Rica
 
-        // Capa de mapa base
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 18,
             attribution: '© OpenStreetMap'
@@ -51,7 +48,6 @@
             { nombre: "Puntarenas", lat: 9.9763, lng: -84.8339, nivel: "afectada" }
         ];
 
-        // Colores según nivel de afectación
         function getColor(nivel) {
             switch (nivel) {
                 case "afectada": return "red";
@@ -61,13 +57,12 @@
             }
         }
 
-        // Añadir marcadores y círculos coloreados
         zonas.forEach(function(zona) {
             L.circle([zona.lat, zona.lng], {
                 color: getColor(zona.nivel),
                 fillColor: getColor(zona.nivel),
                 fillOpacity: 0.5,
-                radius: 15000 // Radio del círculo
+                radius: 15000 
             }).addTo(map)
             .bindPopup("<b>" + zona.nombre + "</b><br>Nivel de Afectación: " + zona.nivel.replace("_", " "));
         });

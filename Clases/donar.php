@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../Estilos/estilos.css">
 </head>
 <body>
-    <!-- Navegación -->
     <nav class="menu">
         <a href="Index.php" class="menu-link">Inicio</a>
         <a href="Ayuda.php" class="menu-link">Ayuda</a>
@@ -39,7 +38,7 @@
 
     <script>
     document.querySelector('.donar-form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Evitar el envío clásico del formulario
+        e.preventDefault(); 
 
         const formData = {
             nombre: document.getElementById('nombre').value,
@@ -52,7 +51,7 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
         })
-        .then(response => response.json()) // Convertir la respuesta a JSON
+        .then(response => response.json()) 
         .then(data => {
             alert(data.message); 
             if (data.status === 'success') {

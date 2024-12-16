@@ -1,12 +1,11 @@
 <?php
-include("Config.php");
+include("../Clases/Config.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $rol = "user"; // Asignación por defecto
+    $rol = "user";
 
-    // Insertar el nuevo usuario en la base de datos
     $sql = "INSERT INTO user (username, password, rol) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", $username, $password, $rol);

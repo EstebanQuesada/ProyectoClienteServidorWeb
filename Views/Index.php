@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-// Verificar si la sesión está activa
 if (!isset($_SESSION['username'])) {
-    // Redirigir al login si no hay sesión
     header("Location: login.php");
     exit();
 }

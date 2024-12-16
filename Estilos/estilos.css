@@ -1,19 +1,16 @@
-/* Reinicio general de estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Configuración general del cuerpo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #2DC4C4; /* Fondo turquesa */
+    background-color: #2DC4C4; 
     color: #333;
     line-height: 1.6;
 }
 
-/* Estilos para la barra de navegación */
 .menu {
     display: flex;
     justify-content: center;
@@ -42,7 +39,6 @@ body {
     color: #ffffff;
 }
 
-/* Contenedor del formulario */
 .form-container {
     max-width: 600px;
     margin: 50px auto;
@@ -52,7 +48,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Título principal */
 .titulo-contacto {
     font-size: 2rem;
     text-align: center;
@@ -60,7 +55,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Etiquetas del formulario */
 .donar-form label {
     display: block;
     margin-bottom: 8px;
@@ -69,7 +63,6 @@ body {
     font-size: 1rem;
 }
 
-/* Campos de entrada y select */
 .donar-form input,
 .donar-form select {
     width: 100%;
@@ -81,7 +74,6 @@ body {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Botón de enviar */
 .btn-submit {
     display: block;
     width: 100%;
@@ -134,21 +126,36 @@ body {
 }
 
 
-.vertical-menu a.menu-item {
+.menu-item {
     display: block;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #fff;
+    color: #333;
     text-align: center;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
-    text-decoration: none;
     font-weight: bold;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
 }
 
-.vertical-menu a.menu-item:hover {
-    background-color: #f1f1f1;
+.menu-item:hover {
+    background-color: #007BFF;
+    color: #fff;
     transform: scale(1.05);
+}
+
+
+
+.login-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }

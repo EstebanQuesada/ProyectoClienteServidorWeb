@@ -2,13 +2,11 @@
 include("Config.php");
 session_start();
 
-// Verificar si el usuario es administrador
 if (!isset($_SESSION['username']) || $_SESSION['rol'] !== 'admin') {
     header("Location: ../Views/login.php");
     exit();
 }
 
-// Procesar el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $titulo = $_POST['titulo'];
     $contenido = $_POST['contenido'];
