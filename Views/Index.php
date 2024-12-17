@@ -24,9 +24,10 @@ if (!isset($_SESSION['username'])) {
             <a href="Mapa.php" class="menu-item">Mapa</a>
             <a href="Contacto.php" class="menu-item">Contáctanos</a>
             <a href="Nosotros.php" class="menu-item">Nosotros</a>
-            <a href="Noticias.php" class="menu-link">Noticias</a>
+            <a href="RegistroVoluntarios.php" class="menu-item">Registro de Voluntarios</a>
+            <a href="Noticias.php" class="menu-item">Noticias</a>
             <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] === 'admin'): ?>
-                <a href="../Clases/AgregarNoticia.php" class="menu-link">Agregar Noticia</a>
+                <a href="../Clases/AgregarNoticia.php" class="menu-item">Agregar Noticia</a>
             <?php endif; ?> 
             <a href="../Clases/logout.php" class="menu-item">Cerrar Sesión</a>       
         </div>

@@ -1,3 +1,4 @@
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +7,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #2DC4C4; 
+    background-color: #2DC4C4; /* Fondo principal */
     color: #333;
     line-height: 1.6;
 }
 
+/* Menú principal */
 .menu {
     display: flex;
     justify-content: center;
@@ -39,41 +41,81 @@ body {
     color: #ffffff;
 }
 
-.form-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Contenedor del menú vertical */
+.container {
+    text-align: center;
+    margin-top: 80px;
 }
 
-.titulo-contacto {
-    font-size: 2rem;
-    text-align: center;
+.titulo-index {
+    font-size: 2.5rem;
     color: #007BFF;
     margin-bottom: 20px;
 }
 
-.donar-form label {
+.vertical-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #80d4ff;
+    border-radius: 10px;
+    padding: 20px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    width: 80%;
+    background-color: #fff;
     color: #333;
-    font-size: 1rem;
-}
-
-.donar-form input,
-.donar-form select {
-    width: 100%;
+    text-align: center;
+    font-weight: bold;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+    margin: 10px 0;
     border-radius: 5px;
-    font-size: 1rem;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
+.menu-item:hover {
+    background-color: #007BFF;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Estilos para Noticias, Agregar y Noticia */
+.news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.news-box {
+    width: 80%;
+    max-width: 300px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.news-box:hover {
+    background-color: #007BFF;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Botón general */
 .btn-submit {
     display: block;
     width: 100%;
@@ -91,6 +133,47 @@ body {
 .btn-submit:hover {
     background-color: #218838;
 }
+
+/* Contenedor de formularios */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titulos */
+.titulo-contacto {
+    font-size: 2rem;
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* Formulario general */
+.donar-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+}
+
+.donar-form input,
+.donar-form textarea,
+.donar-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Noticias */
 .noticias-container {
     max-width: 800px;
     margin: 50px auto;
@@ -123,39 +206,4 @@ body {
     margin-top: 10px;
     color: #777;
     font-size: 0.9rem;
-}
-
-
-.menu-item {
-    display: block;
-    background-color: #fff;
-    color: #333;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.menu-item:hover {
-    background-color: #007BFF;
-    color: #fff;
-    transform: scale(1.05);
-}
-
-
-
-.login-link {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.login-link:hover {
-    color: #0056b3;
-    text-decoration: underline;
 }

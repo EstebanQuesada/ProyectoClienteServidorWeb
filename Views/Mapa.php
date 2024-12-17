@@ -22,6 +22,9 @@
         <a href="Mapa.php" class="menu-link active">Mapa</a>
         <a href="Contacto.php" class="menu-link">Contáctanos</a>
         <a href="Nosotros.php" class="menu-link">Nosotros</a>
+        <a href="RegistroVoluntarios.php" class="menu-link">Registro de Voluntarios</a>
+        <a href="Views/Noticias.php" class="menu-link">Noticias</a>
+        <a href="Clases/logout.php" class="menu-link">Cerrar Sesión</a>
     </nav>
 
     <h1 class="titulo-contacto">Mapa de Zonas Afectadas</h1>
