@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-    <nav class="menu-mapa">
+    <nav class="menu">
         <a href="Index.php" class="menu-link">Inicio</a>
         <a href="Ayuda.php" class="menu-link">Ayuda</a>
         <a href="Donaciones.php" class="menu-link">Donaciones</a>

@@ -8,12 +8,16 @@
 </head>
 <body>
     <nav class="menu">
-        <a href="Index.php" class="menu-link">Inicio</a>
-        <a href="Ayuda.php" class="menu-link">Ayuda</a>
-        <a href="Donaciones.php" class="menu-link active">Donaciones</a>
-        <a href="Mapa.php" class="menu-link">Mapa</a>
-        <a href="Contacto.php" class="menu-link">Contáctanos</a>
-        <a href="Nosotros.php" class="menu-link">Nosotros</a>
+        <a href="../Views/Index.php" class="menu-link">Inicio</a>
+        <a href="../Views/Ayuda.php" class="menu-link">Ayuda</a>
+        <a href="../Views/Donaciones.php" class="menu-link active">Donaciones</a>
+        <a href="../Views/Mapa.php" class="menu-link">Mapa</a>
+        <a href="../Views/Contacto.php" class="menu-link">Contáctanos</a>
+        <a href="../Views/Nosotros.php" class="menu-link">Nosotros</a>
+        <a href="../Views/RegistroVoluntarios.php" class="menu-link">Registro de Voluntarios</a>
+        <a href="../Views/Noticias.php" class="menu-link">Noticias</a>
+        <a href="logout.php" class="menu-link">Cerrar Sesión</a>
+   
     </nav>
 
     <div class="form-container">

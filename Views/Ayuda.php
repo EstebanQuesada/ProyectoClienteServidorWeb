@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayuda</title>
     <link rel="stylesheet" href="../Estilos/estilos.css">
+    <link rel="stylesheet" href="../Estilos/cuadro.css">
+    <link rel="stylesheet" href="../Estilos/menu.css">
 </head>
 <body>
-    <nav class="menu-mapa">
+    <nav class="menu">
         <a href="Index.php" class="menu-link">Inicio</a>
         <a href="Ayuda.php" class="menu-link active">Ayuda</a>
         <a href="Donaciones.php" class="menu-link">Donaciones</a>
@@ -19,7 +21,7 @@
         <a href="Clases/logout.php" class="menu-link">Cerrar Sesión</a>
     </nav>
 
-    <section class="ayuda">
+    <section class="ayuda cuadro">
         <h2>¿Cómo podemos ayudarte?</h2>
         <p>En esta sección encontrarás preguntas frecuentes, guías, y otros recursos útiles para resolver cualquier duda que tengas sobre el uso de nuestro sitio.</p>
 

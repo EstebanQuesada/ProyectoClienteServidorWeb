@@ -26,6 +26,8 @@ if (!isset($_SESSION['username'])) {
             <a href="Views/Nosotros.php" class="menu-item">Nosotros</a>
             <a href="RegistroVoluntarios.php" class="menu-item">Registro de Voluntarios</a>
             <a href="Views/Noticias.php" class="menu-item">Noticias</a>
+            <a href="Views/gestionarRecursos.php" class="menu-item">Gestion de Recursos</a>
+            <a href="Views/seccionEducativa.php" class="menu-item">Sección Educativa</a>
             <a href="Clases/logout.php" class="menu-item">Cerrar Sesión</a>
         </div>
     </div>

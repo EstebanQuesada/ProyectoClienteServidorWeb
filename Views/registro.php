@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="../Estilos/estilos.css">
+    <link rel="stylesheet" href="../Estilos/formulario.css">
 </head>
 <body>
     <div class="login-container">
@@ -37,7 +38,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="password" class="login-label">Contraseña:</label>
             <input type="password" name="password" id="password" class="login-input" required>
 
-            <button type="submit" class="login-button">Registrarse</button>
+            <div class="button-container">
+                <button type="submit" class="login-button">Registrarse</button>
+                <button type="button" class="cancel-button" onclick="window.location.href='login.php';">Cancelar</button>
+            </div>
         </form>
     </div>
 </body>

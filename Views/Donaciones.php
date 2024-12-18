@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donaciones</title>
     <link rel="stylesheet" href="../Estilos/estilos.css">
+    <link rel="stylesheet" href="../Estilos/cuadro.css">
+    <link rel="stylesheet" href="../Estilos/menu.css">
 </head>
 <body>
-    <nav class="menu-mapa">
+    <nav class="menu">
         <a href="Index.php" class="menu-link">Inicio</a>
         <a href="Ayuda.php" class="menu-link">Ayuda</a>
         <a href="Donaciones.php" class="menu-link active">Donaciones</a>
@@ -19,7 +21,7 @@
         <a href="Clases/logout.php" class="menu-link">Cerrar Sesión</a>
     </nav>
 
-    <section class="donaciones">
+    <section class="donaciones cuadro">
         <h2>¿Cómo Puedes Ayudar?</h2>
         <p>Gracias por considerar apoyar nuestro proyecto. Con tu donación, podemos continuar ofreciendo nuestros servicios y mejorar nuestra plataforma.</p>
 
