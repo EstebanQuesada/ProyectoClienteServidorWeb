@@ -1,6 +1,20 @@
 <?php
 include("../Clases/Config.php");
 session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['eliminar_noticia'])) {
+    $id_noticia = (int)$_POST['id_noticia'];
+
+    $sql = "DELETE FROM noticias WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id_noticia);
+    if ($stmt->execute()) {
+        echo "<p>Noticia eliminada correctamente.</p>";
+    } else {
+        echo "<p>Error al eliminar la noticia.</p>";
+    }
+    $stmt->close();
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +48,13 @@ session_start();
             <div class="noticia-box">
                 <h2><?php echo htmlspecialchars($row['titulo']); ?></h2>
                 <p><?php echo nl2br(htmlspecialchars($row['contenido'])); ?></p>
-                <span class="noticia-fecha"><?php echo $row['fecha']; ?></span>
+                <span class="noticia-fecha">Publicado el: <?php echo $row['fecha']; ?></span>
+                <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] === 'admin'): ?>
+                    <form method="POST" style="margin-top: 10px;">
+                        <input type="hidden" name="id_noticia" value="<?php echo $row['id']; ?>">
+                        <button type="submit" name="eliminar_noticia" class="btn-delete">Eliminar</button>
+                    </form>
+                <?php endif; ?>
             </div>
         <?php
             endwhile;
