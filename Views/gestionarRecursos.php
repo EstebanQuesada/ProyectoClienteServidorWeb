@@ -7,7 +7,7 @@ if (!isset($_SESSION['username']) || $_SESSION['rol'] !== 'admin') {
 
 include("../Clases/Config.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['accion']) && $_POST['accion'] === 'agregar') {
     $tipo = $_POST['tipo'];
     $nombre = $_POST['nombre'];
     $cantidad = $_POST['cantidad'];
@@ -18,6 +18,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssis", $tipo, $nombre, $cantidad, $descripcion);
     $stmt->execute();
     $stmt->close();
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['accion']) && $_POST['accion'] === 'restar') {
+    $id_recurso = (int)$_POST['id_recurso'];
+    $cantidad_a_restar = (int)$_POST['cantidad'];
+
+    $sql = "SELECT cantidad FROM recursos WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id_recurso);
+    $stmt->execute();
+    $stmt->bind_result($cantidad_actual);
+    $stmt->fetch();
+    $stmt->close();
+
+    if ($cantidad_actual >= $cantidad_a_restar) {
+        $sql = "UPDATE recursos SET cantidad = cantidad - ?, fecha_actualizacion = CURRENT_TIMESTAMP WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ii", $cantidad_a_restar, $id_recurso);
+        $stmt->execute();
+        $stmt->close();
+        echo "<p>Cantidad actualizada correctamente.</p>";
+    } else {
+        echo "<p>Error: Cantidad insuficiente o recurso no encontrado.</p>";
+    }
 }
 
 $sql = "SELECT * FROM recursos";
@@ -43,6 +67,7 @@ $result = $conn->query($sql);
         <h1 class="titulo-contacto">Gestión de Recursos</h1>
 
         <form action="gestionarRecursos.php" method="POST">
+            <input type="hidden" name="accion" value="agregar">
             <label for="tipo">Tipo de Recurso:</label>
             <select name="tipo" id="tipo" required>
                 <option value="Alimentos">Alimentos</option>
@@ -60,6 +85,29 @@ $result = $conn->query($sql);
             <textarea name="descripcion" id="descripcion" rows="3"></textarea>
 
             <button type="submit" class="btn-submit">Agregar Recurso</button>
+        </form>
+    </div>
+
+    <div class="form-container">
+        <h2 class="titulo-contacto">Restar Cantidades del Inventario</h2>
+
+        <form action="gestionarRecursos.php" method="POST">
+            <input type="hidden" name="accion" value="restar">
+            <label for="id_recurso">Seleccionar Recurso:</label>
+            <select name="id_recurso" id="id_recurso" required>
+                <?php
+                $result_select = $conn->query("SELECT id, nombre FROM recursos");
+                while ($row_select = $result_select->fetch_assoc()): ?>
+                    <option value="<?php echo $row_select['id']; ?>">
+                        <?php echo $row_select['nombre']; ?>
+                    </option>
+                <?php endwhile; ?>
+            </select>
+
+            <label for="cantidad">Cantidad a Restar:</label>
+            <input type="number" name="cantidad" id="cantidad" min="1" required>
+
+            <button type="submit" class="btn-submit">Restar Cantidad</button>
         </form>
     </div>
 
