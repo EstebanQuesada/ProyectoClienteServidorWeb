@@ -19,7 +19,7 @@
         <a href="Nosotros.php" class="menu-link active">Nosotros</a>
         <a href="RegistroVoluntarios.php" class="menu-link">Registro de Voluntarios</a>
         <a href="Views/Noticias.php" class="menu-link">Noticias</a>
-        <a href="Clases/logout.php" class="menu-link">Cerrar Sesión</a>
+        <a href="../Clases/logout.php" class="menu-link">Cerrar Sesión</a>
     </nav>
 
     <div class="nosotros-container">
